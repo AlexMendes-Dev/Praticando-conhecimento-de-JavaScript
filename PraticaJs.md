@@ -86,3 +86,58 @@ document.write(Òla + js_nome + 'Seja Bem Vindo!');
                        </script>
             </body>
             </html>
+
+Exercicío 04 Formulário de SomatoriA
+<!Doctype html>
+<html>
+    <head>
+        <title>js03_funcao.html - Somatória com Entrada de Dados por Formulário</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="utf-8"/>
+    </head>
+
+    <body>
+        <h3>Somatória de dois números inteiros com Conversão de Dados  e Entrada de Dados por Formulário</h3>
+
+                  <!-- Definiçao da área e dos elementos de um Formulário -->
+        <form name="MeuFormulario" action=" " method="post">
+            Entre com valor 1: <input type="text" name="f_n1" /><p></p>
+            Entre com valor 2: <input type="text" name="f_n2" /><p></p>
+            <input type="button" name="btn_somar" value="Somar" onClick="soma()" />
+            <input type="reset" name="btn_apagar" value="Apagar" />
+        </form>
+          <!-- Final da área de um formulário-->
+
+        <!-- Definição da linguagem JavaScrip -->
+        <script language="javascript">
+        <!--
+            
+          /* Objetivo: Desenvolver um programa em JavaScript que faça a leitura de 2 números interios
+            aplique a conversão de valores com parseInt e apresente o resultado da soma entre eles.
+            Entrada de Dados por Formúlario.
+            */
+
+            /* Definição das Variáveis */
+            var js_n1;
+            var js_n2;
+            var js_soma;
+
+            /* Definição da soma () para capturar dados, processar somatória e apresentar o resultado */
+            function soma() {
+
+                /* Entrada de Dados */
+                js_n1= parseInt (document.MeuFormulario.f_n1.value);
+                js_n2= parseInt (document.MeuFormulario.f_n2.value); 
+            /* Processamento de Dados */
+            js_soma= js_n1 + js_n2;
+
+            /* Saída de Dados */
+            window.alert(' Resultado da Somatória = ' + js_soma.toString());
+            }
+            //-->
+            </script>
+            <!--Final da área da linguagem JavaScrip-->
+            
+            </body>
+</html>
